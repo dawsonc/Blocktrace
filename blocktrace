@@ -1,0 +1,27 @@
+#!/usr/bin/env ruby
+
+require 'thor'
+require './tx_tree'
+
+class BlockTrace < Thor
+  
+  desc 'trace ADDRESS', 'trace all transactions from ADDRESS'
+  option :start_time, :aliases => '-s', :type => :numeric, :default => 0, :desc => "Trace all transactions since this time (UNIX Epoch Time)"
+  option :min_amount, :aliases => '-a', :type => :numeric, :default => 0, :desc => "Ignore all transactions less than this amount (BTC)"
+  option :depth, :aliases => '-d', :type => :numeric, :default => 1, :desc => "Traverse this many transaction levels"
+  option :verbose, :aliases => '-v', :type => :boolean, :default => false, :desc => "Verbose mode"
+  def trace(address)
+    print "Tracing #{address}... "
+
+    tree = TX_Tree.new address, options[:start_time], options[:min_amount], options[:depth], options[:verbose]
+    
+    puts "Done"
+    puts ""
+    puts "---------------------------------------------"
+    tree.display
+    puts "---------------------------------------------"
+  end
+
+end
+
+BlockTrace.start(ARGV)
