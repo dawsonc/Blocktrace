@@ -25,8 +25,8 @@ Installation
 ------------
 
 ```
-git clone https://github.com/TheBritKnight/Blocktrace.git
-chmod 755 ./.blocktrace
+git clone https://github.com/TheBritKnight/Blocktrace.git # clone into the repo
+bundle install # install dependencies
+chmod 755 ./.blocktrace # make it executable
+# That's it!
 ```
-
-Note: requires [Thor](https://github.com/erikhuda/thor) (`gem install thor`)
