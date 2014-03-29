@@ -24,3 +24,9 @@ NOTE: Traces can take a while. You can use `--min_amount` and `--max_depth` to s
 Installation
 ------------
 
+```
+git clone https://github.com/TheBritKnight/Blocktrace.git
+chmod 755 ./.blocktrace
+```
+
+Note: requires [Thor](https://github.com/erikhuda/thor) (`gem install thor`)

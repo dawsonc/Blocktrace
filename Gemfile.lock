@@ -1,0 +1,21 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    httparty (0.13.0)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
+    json (1.8.1)
+    multi_xml (0.5.5)
+    rubytree (0.9.3)
+      json (~> 1.8)
+      structured_warnings (~> 0.1)
+    structured_warnings (0.1.4)
+    thor (0.19.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  httparty
+  rubytree
+  thor
